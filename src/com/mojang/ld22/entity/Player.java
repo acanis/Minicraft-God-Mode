@@ -49,6 +49,9 @@ public class Player extends Mob {
 		inventory.add(new ToolItem(ToolType.hoe, 4));
 		inventory.add(new ToolItem(ToolType.pickaxe, 4));
 		inventory.add(new ToolItem(ToolType.shovel, 4));
+		for (int i = 0; i < 20; i++) {
+            inventory.add(new ResourceItem(Resource.bread, 1));
+        }
 	}
 
 	public void tick() {
