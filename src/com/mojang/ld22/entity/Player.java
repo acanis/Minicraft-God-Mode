@@ -97,7 +97,7 @@ public class Player extends Mob {
 		if (input.right.down) xa++;
 		if (isSwimming() && tickTime % 60 == 0) {
 			if (stamina > 0) {
-				stamina--;
+				//stamina--;
 			} else {
 				hurt(this, 1, dir ^ 1);
 			}
@@ -111,7 +111,7 @@ public class Player extends Mob {
 			if (stamina == 0) {
 
 			} else {
-				stamina--;
+				//stamina--;
 				staminaRecharge = 0;
 				attack();
 			}
@@ -351,8 +351,8 @@ public class Player extends Mob {
 	}
 
 	public boolean payStamina(int cost) {
-		if (cost > stamina) return false;
-		stamina -= cost;
+		//if (cost > stamina) return false;
+		//stamina -= cost;
 		return true;
 	}
 
@@ -361,7 +361,7 @@ public class Player extends Mob {
 	}
 
 	public int getLightRadius() {
-		int r = 2;
+		int r = 10;
 		if (activeItem != null) {
 			if (activeItem instanceof FurnitureItem) {
 				int rr = ((FurnitureItem) activeItem).furniture.getLightRadius();
@@ -387,11 +387,13 @@ public class Player extends Mob {
 
 		Sound.playerHurt.play();
 		level.add(new TextParticle("" + damage, x, y, Color.get(-1, 504, 504, 504)));
-		health -= damage;
+		/*
+        health -= damage;
 		if (attackDir == 0) yKnockback = +6;
 		if (attackDir == 1) yKnockback = -6;
 		if (attackDir == 2) xKnockback = -6;
 		if (attackDir == 3) xKnockback = +6;
+        */
 		hurtTime = 10;
 		invulnerableTime = 30;
 	}
