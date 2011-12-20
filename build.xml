@@ -9,7 +9,7 @@
   <property name="src.dir" value="src"/>
   <property name="res.dir" value="res"/>
   <property name="build.dir" value="build"/>
-  <property name="dist.dir" value="dist"/>
+  <property name="dist.dir" value="."/>
 
   <!-- Targets -->
 

@@ -1,1 +1,16 @@
-To play type: 'ant run'
+Minicraft - God Mode
+---------------------
+Author: Andrew Canis
+Date: Dec 20, 2011
+
+In this version of Minicraft you are god:
+1) You don't lose health
+2) You don't lose stamina
+3) You radiate light in the caves
+3) You have all the gem tools
+
+To play run:
+java -jar minicraft.jar
+
+To recompile run: 
+ant run
