@@ -95,6 +95,19 @@ public class Game extends Canvas implements Runnable {
 			levels[i].trySpawn(5000);
 		}
 	}
+	
+	public void Respawn()
+	{
+		level = levels[currentLevel];
+		player = new Player(this, input);
+		player.findStartPos(level);
+		if (player.findStartPos(level)) {
+			level.add(player);
+		}
+		for (int i = 0; i < 5; i++) {
+			levels[i].trySpawn(5000);
+		}
+	}
 
 	private void init() {
 		int pp = 0;

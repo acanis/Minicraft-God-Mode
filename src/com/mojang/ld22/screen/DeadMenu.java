@@ -13,7 +13,11 @@ public class DeadMenu extends Menu {
 	public void tick() {
 		if (inputDelay > 0)
 			inputDelay--;
-		else if (input.attack.clicked || input.menu.clicked) {
+		else if (input.menu.clicked ) {
+			game.Respawn();
+			game.setMenu(null);
+		}
+		else if (input.attack.clicked) {
 			game.setMenu(new TitleMenu());
 		}
 	}
@@ -38,6 +42,6 @@ public class DeadMenu extends Menu {
 		Font.draw(timeString, screen, (2 + 5) * 8, 5 * 8, Color.get(-1, 550, 550, 550));
 		Font.draw("Score:", screen, 2 * 8, 6 * 8, Color.get(-1, 555, 555, 555));
 		Font.draw("" + game.player.score, screen, (2 + 6) * 8, 6 * 8, Color.get(-1, 550, 550, 550));
-		Font.draw("Press C to lose", screen, 2 * 8, 8 * 8, Color.get(-1, 333, 333, 333));
+		Font.draw("x=Respawn,c=Menu", screen, 2 * 8, 8 * 8, Color.get(-1, 333, 333, 333));
 	}
 }
